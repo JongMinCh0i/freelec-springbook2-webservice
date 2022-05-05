@@ -1,4 +1,4 @@
-package com.tutti.book.springboot;
+package com.tutti.book.springboot.web;
 
 import com.tutti.book.springboot.web.HelloController;
 import org.junit.Test;

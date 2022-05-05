@@ -1,4 +1,4 @@
-package com.tutti.book.springboot.dto;
+package com.tutti.book.springboot.web.dto;
 
 import com.tutti.book.springboot.web.dto.HelloResponseDto;
 
@@ -30,4 +30,7 @@ public class HelloResponseDtoTest {
                 */
         assertThat(dto.getAmount()).isEqualTo(amount);
     }
+
+
+
 }

@@ -1,8 +1,13 @@
 package com.tutti.book.springboot.domain.posts;
 
+import com.tutti.book.springboot.web.PostsUpdateRequestDto;
 import lombok.Builder;           // 해당 클래스의 빌더 패턴 클래스 생성, 생성자 상단에 선언 시 생성자에 포함된 필드만 빌더에 포함
 import lombok.Getter;            // 클래스 내 모든 필드의 Getter 메소드를 자동생성
 import lombok.NoArgsConstructor; // 기본 생성자 자동 추가, public Posts() {} 와 같은 효과
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -47,5 +52,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
